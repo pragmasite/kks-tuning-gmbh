@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+Automotive Tuning Business: Dark blue/black with cyan accent
+*/
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 210 50% 12%;
+
+    --card: 210 40% 96%;
+    --card-foreground: 210 50% 12%;
+
+    --popover: 210 40% 98%;
+    --popover-foreground: 210 50% 12%;
+
+    --primary: 210 50% 12%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 188 100% 50%;
+    --secondary-foreground: 210 50% 12%;
+
+    --muted: 210 20% 88%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 188 100% 50%;
+    --accent-foreground: 210 50% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 188 100% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 210 40% 96%;
+    --sidebar-foreground: 210 50% 12%;
+    --sidebar-primary: 210 50% 12%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 188 100% 50%;
+    --sidebar-accent-foreground: 210 50% 12%;
+    --sidebar-border: 210 15% 88%;
+    --sidebar-ring: 188 100% 50%;
+
+    --shadow-soft: 0 4px 20px -4px hsl(210 50% 12% / 0.1);
+    --shadow-medium: 0 8px 30px -6px hsl(210 50% 12% / 0.15);
+  }
+
+  .dark {
+    --background: 210 50% 12%;
+    --foreground: 210 40% 98%;
+
+    --card: 210 50% 16%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 210 50% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 210 50% 12%;
+
+    --secondary: 188 100% 50%;
+    --secondary-foreground: 210 50% 12%;
+
+    --muted: 210 30% 30%;
+    --muted-foreground: 210 15% 70%;
+
+    --accent: 188 100% 50%;
+    --accent-foreground: 210 50% 12%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 30% 25%;
+    --input: 210 30% 25%;
+    --ring: 188 100% 50%;
+    --sidebar-background: 210 50% 12%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 210 50% 12%;
+    --sidebar-accent: 188 100% 50%;
+    --sidebar-accent-foreground: 210 50% 12%;
+    --sidebar-border: 210 30% 25%;
+    --sidebar-ring: 188 100% 50%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'IBM Plex Serif', serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
